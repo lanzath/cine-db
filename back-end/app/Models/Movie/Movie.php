@@ -14,15 +14,6 @@ class Movie extends Model
     protected $fillable = ['name', 'release_date', 'synopsis', 'director', 'rate', 'poster_url'];
 
     /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'release_date' => 'datetime:d/m/Y',
-    ];
-
-    /**
      * Set the movie's release date.
      *
      * @param  string  $value
