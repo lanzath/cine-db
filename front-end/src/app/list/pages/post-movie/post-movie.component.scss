@@ -1,0 +1,19 @@
+.form-group {
+    display: grid;
+    place-items: center;
+    input, textarea {
+        margin-bottom: 1em;
+        width: 50%;
+        background-color: black;
+        border-color: #343a40;
+        color: white;
+    }
+}
+
+@media (max-width: 1024px){
+    .form-group {
+        input, textarea {
+            width: 90%;
+        }
+    }
+}

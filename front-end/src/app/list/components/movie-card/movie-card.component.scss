@@ -1,0 +1,33 @@
+.movie-card {
+    background-color: #343a40;
+    border-radius: 15px;
+    width: 100%;
+    padding: 1em;
+    img {
+        width: 100%;
+        height: 28em;
+    }
+    .title {
+        font-size: 25px;
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .rating {
+        font-size: 15px;
+    }
+    .synopsis {
+        font-size: 12px;
+        word-break: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 16px;
+        max-height: 65px;
+        height: 65px;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+
+}

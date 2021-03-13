@@ -1,0 +1,21 @@
+<div class="col-sm-12 col-md-8 offset-md-2">
+    <h1 class="text-center my-5">Cadastre um novo filme</h1>
+
+    <form [formGroup]="postForm">
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="Nome" formControlName="name" [class.is-invalid]="name.dirty && name.invalid">
+            <input class="form-control" type="date" placeholder="Data de lançamento" formControlName="release_date" [class.is-invalid]="release_date.dirty && release_date.invalid">
+            <textarea class="form-control" maxlength="500" type="text" placeholder="Sinopse" formControlName="synopsis" [class.is-invalid]="synopsis.dirty && synopsis.invalid"></textarea>
+            <input class="form-control" type="text" placeholder="Diretor" formControlName="director" [class.is-invalid]="director.dirty && director.invalid">
+            <input class="form-control" type="number" max="5" min="1" placeholder="Nota" formControlName="rate" [class.is-invalid]="rate.dirty && rate.invalid">
+            <span class="text-danger" *ngIf="rate.dirty && rate.invalid">Nota pode ser de 1 e 5</span>
+            <input class="form-control" type="text" placeholder="URL do poster" formControlName="poster_url" [class.is-invalid]="poster_url.dirty && poster_url.invalid">
+        </div>
+    </form>
+
+    <div class="text-center">
+        <button (click)="back()" class="btn btn-danger">Cancelar</button>
+        <button (click)="onSubmit()" class="btn btn-primary ml-3">Enviar</button>
+    </div>
+</div>
+

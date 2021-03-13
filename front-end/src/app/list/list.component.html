@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 class="text-center my-5">Meus filmes</h1>
+    <div class="row">
+        <div class="col-sm-12 col-md-4 mb-5" *ngFor="let movie of movies">
+            <app-movie-card [movieData]="movie"></app-movie-card>
+        </div>
+    </div>
+    <div class="add-holder">
+        <i (click)="navigateToPost()" class="fa fa-3x fa-plus-circle" aria-hidden="true"></i>
+    </div>
+</div>
